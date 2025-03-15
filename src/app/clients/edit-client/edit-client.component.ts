@@ -13,5 +13,6 @@ import { SERVICES_TOKEN } from '../../services/service.token';
   ]
 })
 export class EditClientComponent {
+  //Configuração de injeção de dependencia e o serviços configurados também...
   constructor(@Inject(SERVICES_TOKEN.HTTP.CLIENT) private readonly httpService: IClienteService){}
 }
