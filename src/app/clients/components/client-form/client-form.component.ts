@@ -27,7 +27,7 @@ export class ClientFormComponent {
   @Output() clientSubmited = new EventEmitter<ClientModelForm>();
 
   //Esse é um evento
-  obSubmit(_: NgForm){
+  onSubmit(_: NgForm){
     this.clientSubmited.emit(this.client)
   }
 }
