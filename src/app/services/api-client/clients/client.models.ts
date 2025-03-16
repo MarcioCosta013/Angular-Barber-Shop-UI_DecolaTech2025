@@ -1,6 +1,6 @@
 export interface SaveClientResquest {
   //o que vamos mandar para o back-end para ele poder salvar
-  nome: string
+  name: string
   email: string
   phone: string
 }

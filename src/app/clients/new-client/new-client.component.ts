@@ -40,11 +40,9 @@ export class NewClientComponent implements OnDestroy{
   //metodo que escuta o evento
   onSubmitClient(value: ClientModelForm){
     const {id, ...request} = value //Fazendo uma desconstrução do Objeto, fazendo que só tenha o nome, email e phone...
-    this.httpSubscription =this.httpService.save(request).subscribe(_=>{
+    this.httpSubscription =this.httpService.save(request).subscribe(_ =>{
       this.snackBarManage.show('Usuario cadastrado com Sucesso')
       this.router.navigate(['client/list']) //se der tudo certo redirecionar para outra pagina...
     })
   }
 }
-
-//

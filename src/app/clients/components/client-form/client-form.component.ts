@@ -21,7 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class ClientFormComponent {
 
   //Usado para ler coisas que são passadas de um componentes para o outro.(Para esse no caso)
-  @Input() client: ClientModelForm = {id: 0, nome:'', email:'', phone:''}
+  @Input() client: ClientModelForm = {id: 0, name:'', email:'', phone:''}
 
   //Usado para disparar eventos para serem escutados por outros componentes
   @Output() clientSubmited = new EventEmitter<ClientModelForm>();
