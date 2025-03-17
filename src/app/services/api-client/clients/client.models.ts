@@ -7,7 +7,7 @@ export interface SaveClientResquest {
 
 export interface UpdateClientResquest {
 
-  nome: string
+  name: string
   email: string
   phone: string
 }
@@ -15,7 +15,7 @@ export interface UpdateClientResquest {
 export interface SaveClientResponse {
 
   id: number
-  nome: string
+  name: string
   email: string
   phone: string
 }
@@ -23,7 +23,7 @@ export interface SaveClientResponse {
 export interface UpdateClientResponse {
 
   id: number
-  nome: string,
+  name: string,
   email: string,
   phone: string
 }
@@ -31,7 +31,7 @@ export interface UpdateClientResponse {
 export interface ListClientResponse {
 
   id: number
-  nome: string,
+  name: string,
   email: string,
   phone: string
 }
@@ -39,7 +39,7 @@ export interface ListClientResponse {
 export interface DetailClientResponse {
 
   id: number
-  nome: string,
+  name: string,
   email: string,
   phone: string
 }

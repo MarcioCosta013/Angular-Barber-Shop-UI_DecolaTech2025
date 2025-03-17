@@ -9,7 +9,7 @@ export interface ClientModelForm { //Vai ser reutilizado tanto no insert como no
 export interface ClientModelTable {
 
   id: number
-  nome: string,
+  name: string,
   email: string,
   phone: string
 }
