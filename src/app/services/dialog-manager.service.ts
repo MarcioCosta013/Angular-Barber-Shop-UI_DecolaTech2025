@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { YesNoDialogComponent } from '../commons/components/yes-no-dialog/yes-no-dialog.component';
-import { IdialogManagerService } from './idialog-manager.service';
+import { IDialogManagerService } from './idialog-manager.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export default class DialogManagerService implements IdialogManagerService {
+export default class DialogManagerService implements IDialogManagerService {
 
   constructor(private readonly dialog: MatDialog) { }
 

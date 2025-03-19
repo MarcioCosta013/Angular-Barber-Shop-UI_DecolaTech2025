@@ -7,7 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { Subscription } from 'rxjs';
 import { SERVICES_TOKEN } from '../../../services/service.token';
-import { IdialogManagerService } from '../../../services/idialog-manager.service';
+import { IDialogManagerService } from '../../../services/idialog-manager.service';
 import DialogManagerService from '../../../services/dialog-manager.service';
 import { YesNoDialogComponent } from '../../../commons/components/yes-no-dialog/yes-no-dialog.component';
 import { CustomPaginator } from './custom-paginator';
@@ -39,7 +39,7 @@ export class ClientTableComponent implements AfterViewInit, OnChanges, OnDestroy
   @Output() onRequestUpdate = new EventEmitter<ClientModelTable>() //Envia um aviso quando um cliente precisa ser atualizado.
 
   constructor(
-    @Inject(SERVICES_TOKEN.DIALOG) private readonly dialogManagerService: IdialogManagerService,
+    @Inject(SERVICES_TOKEN.DIALOG) private readonly dialogManagerService: IDialogManagerService,
   ){  }
 
   ngAfterViewInit(): void {
@@ -82,7 +82,7 @@ export class ClientTableComponent implements AfterViewInit, OnChanges, OnDestroy
       YesNoDialogComponent,
       { title: 'Exclusão de cliente', content: `Confirma a exclusão do cliente ${client.name}` }
     )
-      .subscribe(result => {
+      .subscribe((result: any) => {
         if(result){
           this.onConfirmDelete.emit(client) //Se o usuário confirmar, enviamos um aviso de que o cliente foi excluído.
           //Removemos o cliente da lista e atualizamos a tabela...

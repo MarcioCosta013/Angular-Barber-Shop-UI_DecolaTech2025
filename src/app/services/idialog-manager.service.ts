@@ -3,8 +3,10 @@ import { YesNoDialogComponent } from "../commons/components/yes-no-dialog/yes-no
 import { Observable } from "rxjs";
 
 
-export interface IdialogManagerService {
+export interface IDialogManagerService {
 
-  showYesNoDialog(component: ComponentType<YesNoDialogComponent>, data:{title:string, content:string}): Observable:<any>
+  showYesNoDialog(component: ComponentType<YesNoDialogComponent>, data: { title: string, content: string }): Observable<any>
+
 
 }
+
